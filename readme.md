@@ -15,11 +15,18 @@ This project is aimed at applying data analysis and machine learning techniques 
 
 ## 📁 Projects
 
-### 🔍 Will the Customers Accept the Coupons?
+### 🔍 Will the customers accept the coupons?
 
 This project explores coupon acceptance behavior using a dataset collected via Amazon Mechanical Turk.
 
 ➡️ For full analysis and visualizations, see: [coupon-app1 README](coupon-app1/readme.md)
+
+### 🔍 What drives price of the car?
+
+This project explores the factors that drives the price of the car using a dataset from Kaggle.
+
+➡️ For full analysis and visualizations, see: [carprice-app2 README](carprice-app2/readme.md)
+
 
 ## ⚙️ Installation
 
