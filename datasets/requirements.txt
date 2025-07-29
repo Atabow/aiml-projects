@@ -1,0 +1,38 @@
+# Core data manipulation and analysis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# HTTP requests for data downloading
+requests>=2.28.0
+
+# Machine learning
+scikit-learn>=1.1.0
+
+# Data visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Geospatial analysis
+geopandas>=0.13.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Additional useful packages for ML projects
+scipy>=1.9.0
+plotly>=5.0.0
+
+# Model interpretation and advanced ML (optional but recommended)
+xgboost>=1.6.0
+lightgbm>=3.3.0
+catboost>=1.0.0
+
+# Statistical analysis
+statsmodels>=0.13.0
+
+# Progress bars and utilities
+tqdm>=4.64.0
+
+# Feature engineering and preprocessing
+category-encoders>=2.5.0
