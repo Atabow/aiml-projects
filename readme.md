@@ -27,6 +27,12 @@ This project explores the factors that drives the price of the car using a datas
 
 ➡️ For full analysis and visualizations, see: [carprice-app2 README](carprice-app2/readme.md)
 
+### 🔍 Will customer subscribe to term deposit?
+
+This project analyzes the UCI Bank Marketing dataset to predict term-deposit subscription using EDA, feature engineering, and various models.
+
+➡️ For full analysis and visualizations, see: [bankcd-app3 README](bankcd-app3/readme.md)
+
 
 ## ⚙️ Installation
 
