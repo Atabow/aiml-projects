@@ -33,6 +33,12 @@ This project analyzes the UCI Bank Marketing dataset to predict term-deposit sub
 
 ➡️ For full analysis and visualizations, see: [bankcd-app3 README](bankcd-app3/readme.md)
 
+### 🔍 Capstone
+
+This project analyzes the Seattle Police Department crime data with US Census demographics to predict crime volumes and identify key factors influencing criminal activity.
+
+➡️ For full analysis and visualizations, see: [capstone README](capstone/readme.md)
+
 
 ## ⚙️ Installation
 

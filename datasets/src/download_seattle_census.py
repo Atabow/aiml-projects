@@ -24,11 +24,14 @@ if not CENSUS_API_KEY:
 
 census_client = Census(CENSUS_API_KEY)
 
+def get_project_root() -> Path:
+    """Get the project root directory."""
+    return Path(__file__).parent.parent
+
 def get_census_data_dir() -> Path:
     """Get the directory path for storing census data."""
     # Get the project root directory (assuming this file is in data_src/)
-    project_root = Path(__file__).parent.parent
-    data_directory = project_root / "data" / "downloads" / "seattle"
+    data_directory = get_project_root() / "data" / "downloads" / "seattle"
     
     # Create directory if it doesn't exist
     data_directory.mkdir(parents=True, exist_ok=True)
@@ -193,8 +196,7 @@ if all_demographics:
     df_all_demographics = pd.concat(all_demographics.values(), ignore_index=True)
     
     # Save the combined dataset to the joined folder (processed data)
-    project_root = Path(__file__).parent.parent
-    joined_dir = project_root / "data" / "joined"
+    joined_dir = get_project_root() / "data" / "joined"
     joined_dir.mkdir(parents=True, exist_ok=True)
     
     combined_filepath = joined_dir / "king_county_census_combined.csv"

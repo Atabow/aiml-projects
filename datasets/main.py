@@ -173,11 +173,27 @@ def main():
     
     # Check final outputs
     print("\nFinal Output Files:")
-    output_files = [
-        ("data/downloads/seattle/SPD_Crime_Data__2008-Present_20250727.csv", "SPD Crime Data"),
-        ("data/joined/king_county_census_combined.csv", "Combined Census Data"),
-        ("data/joined/spd_census_joined.csv", "Final Joined Dataset"),
-    ]
+    
+    # Dynamic file checking based on cleanup mode
+    if args.cleanup:
+        # In cleanup mode, only check the final joined dataset since downloads are deleted
+        output_files = [
+            ("data/joined/king_county_census_combined.csv", "Combined Census Data"),
+            ("data/joined/spd_census_joined.csv", "Final Joined Dataset"),
+        ]
+    else:
+        # In normal mode, check all files including dynamic SPD filename
+        spd_files = list(Path("data/downloads/seattle").glob("SPD_Crime_Data__2008-Present_*.csv"))
+        
+        output_files = [
+            ("data/joined/king_county_census_combined.csv", "Combined Census Data"),
+            ("data/joined/spd_census_joined.csv", "Final Joined Dataset"),
+        ]
+        
+        # Add SPD file if it exists
+        if spd_files:
+            spd_file = spd_files[0]  # Use the first (or only) file found
+            output_files.insert(0, (str(spd_file), "SPD Crime Data"))
     
     all_outputs_exist = True
     for file_path, description in output_files:
